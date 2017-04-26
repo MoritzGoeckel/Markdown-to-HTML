@@ -27,10 +27,13 @@ $(document).ready(function ()
 	//>
 	text = doPattern(text, /^ *> (.+)/gm, function(m){ return "<span class='quote'>" + m + "</span>"});
 	//Blank
-	text = doPattern(text, /^\s*\n/gm, function(m){ return "</span><span class='paragraph'>"});
+	/*text = doPattern(text, /^\s*\n/gm, function(m){ return "</span><span class='paragraph'>"});
 	text = text.substring("</span>".length, text.length);
-	text += "</span>";
+	text += "</span>";*/
 	
+	//Todo: Paragraphs and linebreaks
+	//Todo: Refactor to make extendable
+
 	console.log(text);
 	$("#md_content").html(text);
 	
