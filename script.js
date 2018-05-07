@@ -26,20 +26,24 @@ $(document).ready(function ()
 	text = doPattern(text, /\*(.+)?\*/gm, function(m){ return "<i>" + m + "</i>"});
 	//>
 	text = doPattern(text, /^ *> (.+)/gm, function(m){ return "<span class='quote'>" + m + "</span>"});
-	//Blank
-	/*text = doPattern(text, /^\s*\n/gm, function(m){ return "</span><span class='paragraph'>"});
-	text = text.substring("</span>".length, text.length);
-	text += "</span>";*/
 	
-	//Todo: Paragraphs and linebreaks
-	//Todo: Refactor to make extendable
-
+	//Create paragraphs
+	let blockTags = ["<h1>", "<h2>", "<span class='quote'>", "<li>"];
+	let lines = text.split('\n');
+	for(let line in lines){
+		if(/\S+/.test(lines[line])){ //Check if empty
+			let needToDoParagraph = true;
+			for(let tag in blockTags)
+				if(lines[line].startsWith(blockTags[tag]))
+					needToDoParagraph = false;
+			
+			if(needToDoParagraph)
+				lines[line] = "<span class='paragraph'>" + lines[line] + "</span>";
+		}
+	}
+	
+	text = lines.join('');
+	
 	console.log(text);
-	$("#md_content").html(text);
-	
-	/*$.get(".", function(data) 
-	{
-		$("#fileNames").append(data);
-	});*/
-	
+	$("#md_content").html(text);	
 });

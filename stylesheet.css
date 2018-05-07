@@ -4,6 +4,10 @@
 	padding-bottom: 10px;
 }
 
+.paragraph + .paragraph {
+  padding-top: 0px;
+}
+
 .quote{
 	display: block;
     	color: #797979;

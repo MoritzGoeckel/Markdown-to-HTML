@@ -1,5 +1,5 @@
 # Markdown to HTML in JS
-This is a md to htmk parser in javascript. Work in progress.
+This is a md to html parser in javascript. To try it out: [Live!](http://moritzgoeckel.com/Markdown-to-HTML/)
 
 # Example Markdown input
 ```markdown
@@ -27,10 +27,9 @@ Normaler Text in Absatz
 <li>Item 1</li>
 <li>Item 2</li>
 
-<i>Kursiv</i> nichts <b>bold</b>
-			
-Normaler Text in Absatz
-			
+<span class='paragraph'><i>Kursiv</i> nichts <b>bold</b></span>
+<span class='paragraph'>Normaler Text in Absatz</span>
+
 <span class='quote'>Zitat</span>
-<span class='quote'>Zweite Zeile</span>
+<span class='quote'>Zweite Zeile</span>	
 ```
