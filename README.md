@@ -1,7 +1,7 @@
 # Markdown to HTML in JS
 This is a md to html parser in javascript. To try it out: [Live!](http://moritzgoeckel.com/Markdown-to-HTML/)
 
-# Example Markdown input
+## Example Markdown input
 ```markdown
 # h1
 # h11
@@ -18,10 +18,10 @@ Normaler Text in Absatz
 > Zweite Zeile
 ```
 
-# Visual output
+## Example visual output
 ![Example formatted md visual output](https://raw.githubusercontent.com/MoritzGoeckel/Markdown-to-HTML/master/example.JPG)
 
-# Example HTML output
+## Example HTML output
 ```html
 <h1>h1</h1>
 <h1>h11</h1>
