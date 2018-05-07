@@ -1,7 +1,7 @@
 # Markdown to HTML in JS
 This is a md to html parser in javascript. To try it out: [Live!](http://moritzgoeckel.com/Markdown-to-HTML/)
 
-## Example Markdown input
+## Example markdown input
 ```markdown
 # h1
 # h11
