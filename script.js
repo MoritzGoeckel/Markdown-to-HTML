@@ -10,16 +10,13 @@ function doPattern(text, regex, replaceFn){
 	return output;
 }
 
-$(document).ready(function () 
-{
-	let text = $("#md_content").text();
-	
+function transformToMarkdown(text){
 	//#
 	text = doPattern(text, /^ *# (.+)/gm, function(m){ return "<h1>" + m + "</h1>"});
 	//##
 	text = doPattern(text, /^ *## (.+)/gm, function(m){ return "<h2>" + m + "</h2>"});
 	//*
-	text = doPattern(text, /^ *\* (.+)/gm, function(m){ return "<li>" + m + "</li>"}); //ul
+	text = doPattern(text, /^ *\* (.+)/gm, function(m){ return "<li>" + m + "</li>"}); //Todo: ul
 	//**text**
 	text = doPattern(text, /\*\*(.+)?\*\*/gm, function(m){ return "<b>" + m + "</b>"});
 	//*text*
@@ -42,7 +39,12 @@ $(document).ready(function ()
 		}
 	}
 	
-	text = lines.join('');
+	return lines.join('');
+}
+
+$(document).ready(function () 
+{
+	let text = transformToMarkdown($("#md_content").text());
 	
 	console.log(text);
 	$("#md_content").html(text);	

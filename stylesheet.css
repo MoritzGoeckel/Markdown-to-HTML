@@ -10,8 +10,9 @@
 
 .quote{
 	display: block;
-    	color: #797979;
-    	text-indent: 15pt;
+	color: #797979;
+	text-indent: 15pt;
+	border-left: solid #797979 0.2em;
 }
 
 h1, h2 {
