@@ -5,5 +5,12 @@
 }
 
 .quote{
-	background-color: gray;
+	display: block;
+    	color: #797979;
+    	text-indent: 15pt;
+}
+
+h1, h2 {
+    margin-top: 0px;
+    margin-bottom: 0.2em;
 }
