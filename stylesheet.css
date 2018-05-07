@@ -11,6 +11,11 @@
 }
 
 h1, h2 {
-    margin-top: 0px;
-    margin-bottom: 0.2em;
+    	margin-top: 0px;
+    	margin-bottom: 0.2em;
+}
+
+body{
+	font-family: sans-serif;
+    	font-size: 12pt;	
 }
