@@ -18,6 +18,9 @@ Normaler Text in Absatz
 > Zweite Zeile
 ```
 
+# Visual output
+![Example formatted md visual output](https://raw.githubusercontent.com/MoritzGoeckel/Markdown-to-HTML/master/example.JPG)
+
 # Example HTML output
 ```html
 <h1>h1</h1>
